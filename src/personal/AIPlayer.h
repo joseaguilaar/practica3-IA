@@ -10,6 +10,11 @@ class ValoracionTest: public Heuristic{
       virtual float getHeuristic(const Parchis &estado, int jugador) const;
 };
 
+class HeuristicaP_A: public Heuristic{
+   protected:
+      virtual float getHeuristic(const Parchis &estado, int jugador) const;
+};
+
 class AIPlayer : public Player{
 protected:
    //Id identificativo del jugador
@@ -62,6 +67,19 @@ public:
     */
    virtual void think(color& c_piece, int& id_piece, int& dice) const;
 
+   void thinkAleatorio(color &c_piece, int &id_piece, int &dice) const;
+   void thinkFichaMasAdelantada(color &c_piece, int &id_piece, int &dice) const;
+   void thinkMejorOpcion(color &c_piece, int &id_piece, int &dice) const;
+   float Minimax(const Parchis &actual, int jugador, int profundidad, int profundidad_max, color &c_piece, int &id_piece, int &dice, Heuristic *heuristic) const;
+   float Minimax_Limitado(const Parchis &actual, int jugador, int profundidad, int profundidad_max, color &c_piece, int &id_piece, int &dice, Heuristic *heuristic) const;
+   float Minimax_Limitado_Nodos(const Parchis &actual, int jugador, int profundidad, int profundidad_max, color &c_piece, int &id_piece, int &dice, Heuristic *heuristic) const;
+   float Poda_AlfaBeta(const Parchis &actual, int jugador, int profundidad, int profundidad_max, color &c_piece, int &id_piece, int &dice, float alpha, float beta, Heuristic *heuristic) const;
+   float ProfundidadDinamica(const Parchis &actual, int jugador, int profundidad, int profundidad_max, color &c_piece, int &id_piece, int &dice, float alpha, float beta, Heuristic *heuristic) const;
+   float OrdenacionMovimientos(const Parchis &actual, int jugador, int profundidad, int profundidad_max, color &c_piece, int &id_piece, int &dice, float alpha, float beta, Heuristic *heuristic) const;
+
+
+
+
    /**
     * @brief Método que determina si el player es inteligente (decide el mejor movimiento)
     * o no. True para AIPlayer.
@@ -77,10 +95,5 @@ public:
  * @brief Propuesta de declaración de la función poda alfa-beta.
  * La propuesta es solo sugerencia, los parámetros de la declaración podrían variar.
  */
-// float Poda_AlfaBeta(const Parchis &actual, int jugador, int profundidad, int profundidad_max, color &c_piece, int &id_piece, int &dice, float alpha, float beta, Heuristic *heuristic);
-
-
-
-
 
 #endif
