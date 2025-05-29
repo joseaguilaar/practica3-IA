@@ -34,16 +34,13 @@ Move: 2 Amarillo 0 6
 [1;32mTotal de nodos: 0[0m
 [1;32mTiempo de generación+evaluación: 0[0m
 [1;37m====================[0m
-[1;37mTiempo de movimiento: 19.8362 segundos[0m
+[1;37mTiempo de movimiento: 20.384 segundos[0m
 301 MOVED sent
 Move: 2 Amarillo 0 6
 [1;36m----------------[0m
 [1;36mTurno: 2[0m
 [1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
 [1;36m----------------[0m
-[1;38;5;208mEsperando movimiento del oponente...[0m
-102 TEST_ALIVE received
-102 TEST_ALIVE received. Still alive.
 [1;38;5;208mEsperando movimiento del oponente...[0m
 102 TEST_ALIVE received
 102 TEST_ALIVE received. Still alive.
@@ -56,7 +53,7 @@ Move: 3 Amarillo 0 5
 [1;32mTotal de nodos: 0[0m
 [1;32mTiempo de generación+evaluación: 0[0m
 [1;37m====================[0m
-[1;37mTiempo de movimiento: 38.9983 segundos[0m
+[1;37mTiempo de movimiento: 18.4038 segundos[0m
 301 MOVED sent
 Move: 3 Amarillo 0 5
 [1;36m----------------[0m
@@ -71,51 +68,33 @@ Límite de nodos alcanzado, devolviendo el mejor nodo parcial
 Límite de nodos alcanzado, devolviendo el mejor nodo parcial
 Límite de nodos alcanzado, devolviendo el mejor nodo parcial
 Límite de nodos alcanzado, devolviendo el mejor nodo parcial
-Valor MiniMaxLimitado: 35 Accion: Azul 1 5
-[1;38;5;208mMovimiento elegido: Azul 1 5[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 5[0m
 [1;37m====================[0m
-[1;37mNodos generados: 3135971[0m
-[1;37mNodos evaluados: 364036[0m
-[1;33mTotal de nodos: 3500007[0m
-[1;32mTiempo de generación+evaluación: 33.1066[0m
+[1;37mNodos generados: 3132443[0m
+[1;37mNodos evaluados: 367563[0m
+[1;33mTotal de nodos: 3500006[0m
+[1;32mTiempo de generación+evaluación: 68.7065[0m
 [1;37m====================[0m
-[1;37mTiempo de movimiento: 308.491 segundos[0m
+[1;37mTiempo de movimiento: 72.5912 segundos[0m
 301 MOVED sent
-Move: 4 Azul 1 5
+Move: 4 Rojo 0 5
 [1;36m----------------[0m
 [1;36mTurno: 4[0m
 [1;31mJugador actual: 2 (2)[0m
 [1;36m----------------[0m
 [1;38;5;208mRealizo un movimiento automatico[0m
-Valor MiniMaxLimitado: 21 Accion: Rojo 0 6
-[1;38;5;208mMovimiento elegido: Rojo 0 6[0m
+[1;38;5;208mMovimiento elegido: Azul 1 2[0m
 [1;37m====================[0m
-[1;37mNodos generados: 1671204[0m
-[1;37mNodos evaluados: 188835[0m
-[1;32mTotal de nodos: 1860039[0m
-[1;32mTiempo de generación+evaluación: 17.2399[0m
+[1;37mNodos generados: 1280074[0m
+[1;37mNodos evaluados: 152137[0m
+[1;32mTotal de nodos: 1432211[0m
+[1;32mTiempo de generación+evaluación: 29.9938[0m
 [1;37m====================[0m
-[1;37mTiempo de movimiento: 16492.7 segundos[0m
+[1;37mTiempo de movimiento: 31.9626 segundos[0m
 301 MOVED sent
-Move: 5 Rojo 0 6
+Move: 5 Azul 1 2
 [1;36m----------------[0m
 [1;36mTurno: 5[0m
-[1;31mJugador actual: 2 (2)[0m
-[1;36m----------------[0m
-[1;38;5;208mRealizo un movimiento automatico[0m
-Valor MiniMaxLimitado: 18 Accion: Azul 1 4
-[1;38;5;208mMovimiento elegido: Azul 1 4[0m
-[1;37m====================[0m
-[1;37mNodos generados: 242308[0m
-[1;37mNodos evaluados: 50236[0m
-[1;32mTotal de nodos: 292544[0m
-[1;32mTiempo de generación+evaluación: 2.20537[0m
-[1;37m====================[0m
-[1;37mTiempo de movimiento: 2.4998 segundos[0m
-301 MOVED sent
-Move: 6 Azul 1 4
-[1;36m----------------[0m
-[1;36mTurno: 6[0m
 [1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
 [1;36m----------------[0m
 [1;38;5;208mEsperando movimiento del oponente...[0m
@@ -128,3 +107,1418 @@ Move: 6 Azul 1 4
 102 TEST_ALIVE received
 102 TEST_ALIVE received. Still alive.
 [1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 4 Rojo 0 5
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 5 Azul 1 2
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 6 Amarillo 0 69
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.94371 segundos[0m
+301 MOVED sent
+Move: 6 Amarillo 0 69
+[1;36m----------------[0m
+[1;36mTurno: 6[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 7 Amarillo 0 2
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.463895 segundos[0m
+301 MOVED sent
+Move: 7 Amarillo 0 2
+[1;36m----------------[0m
+[1;36mTurno: 7[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+[1;38;5;208mMovimiento elegido: Rojo 1 1[0m
+[1;37m====================[0m
+[1;37mNodos generados: 2949510[0m
+[1;37mNodos evaluados: 550490[0m
+[1;33mTotal de nodos: 3500000[0m
+[1;32mTiempo de generación+evaluación: 88.5238[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 92.2163 segundos[0m
+301 MOVED sent
+Move: 8 Rojo 1 1
+[1;36m----------------[0m
+[1;36mTurno: 8[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 1 69[0m
+[1;37m====================[0m
+[1;37mNodos generados: 2868633[0m
+[1;37mNodos evaluados: 194783[0m
+[1;32mTotal de nodos: 3063416[0m
+[1;32mTiempo de generación+evaluación: 47.9007[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 50.6068 segundos[0m
+301 MOVED sent
+Move: 9 Rojo 1 69
+[1;36m----------------[0m
+[1;36mTurno: 9[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 8 Rojo 1 1
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 9 Rojo 1 69
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 10 Amarillo 0 4
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.733493 segundos[0m
+301 MOVED sent
+Move: 10 Amarillo 0 4
+[1;36m----------------[0m
+[1;36mTurno: 10[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 11 Verde 0 1
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.952795 segundos[0m
+301 MOVED sent
+Move: 11 Verde 0 1
+[1;36m----------------[0m
+[1;36mTurno: 11[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 1 4[0m
+[1;37m====================[0m
+[1;37mNodos generados: 910460[0m
+[1;37mNodos evaluados: 319408[0m
+[1;32mTotal de nodos: 1229868[0m
+[1;32mTiempo de generación+evaluación: 37.3716[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 38.556 segundos[0m
+301 MOVED sent
+Move: 12 Rojo 1 4
+[1;36m----------------[0m
+[1;36mTurno: 12[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 6[0m
+[1;37m====================[0m
+[1;37mNodos generados: 1771618[0m
+[1;37mNodos evaluados: 522137[0m
+[1;32mTotal de nodos: 2293755[0m
+[1;32mTiempo de generación+evaluación: 63.7169[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 65.7844 segundos[0m
+301 MOVED sent
+Move: 13 Azul 1 6
+[1;36m----------------[0m
+[1;36mTurno: 13[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 1 20[0m
+[1;37m====================[0m
+[1;37mNodos generados: 921053[0m
+[1;37mNodos evaluados: 183601[0m
+[1;32mTotal de nodos: 1104654[0m
+[1;32mTiempo de generación+evaluación: 20.519[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 21.6251 segundos[0m
+301 MOVED sent
+Move: 14 Rojo 1 20
+[1;36m----------------[0m
+[1;36mTurno: 14[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 1 6[0m
+[1;37m====================[0m
+[1;37mNodos generados: 2284315[0m
+[1;37mNodos evaluados: 674817[0m
+[1;32mTotal de nodos: 2959132[0m
+[1;32mTiempo de generación+evaluación: 71.0499[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 73.9384 segundos[0m
+301 MOVED sent
+Move: 15 Rojo 1 6
+[1;36m----------------[0m
+[1;36mTurno: 15[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 0 10[0m
+[1;37m====================[0m
+[1;37mNodos generados: 214664[0m
+[1;37mNodos evaluados: 38427[0m
+[1;32mTotal de nodos: 253091[0m
+[1;32mTiempo de generación+evaluación: 3.58712[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 3.84214 segundos[0m
+301 MOVED sent
+Move: 16 Azul 0 10
+[1;36m----------------[0m
+[1;36mTurno: 16[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 0 20[0m
+[1;37m====================[0m
+[1;37mNodos generados: 1084465[0m
+[1;37mNodos evaluados: 255522[0m
+[1;32mTotal de nodos: 1339987[0m
+[1;32mTiempo de generación+evaluación: 22.2151[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 23.5443 segundos[0m
+301 MOVED sent
+Move: 17 Azul 0 20
+[1;36m----------------[0m
+[1;36mTurno: 17[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 5[0m
+[1;37m====================[0m
+[1;37mNodos generados: 2652653[0m
+[1;37mNodos evaluados: 694204[0m
+[1;32mTotal de nodos: 3346857[0m
+[1;32mTiempo de generación+evaluación: 54.7551[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 57.937 segundos[0m
+301 MOVED sent
+Move: 18 Rojo 0 5
+[1;36m----------------[0m
+[1;36mTurno: 18[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 12 Rojo 1 4
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 13 Azul 1 6
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 14 Rojo 1 20
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 15 Rojo 1 6
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 16 Azul 0 10
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 17 Azul 0 20
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 18 Rojo 0 5
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 19 Verde 0 6
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 6.74485 segundos[0m
+301 MOVED sent
+Move: 19 Verde 0 6
+[1;36m----------------[0m
+[1;36mTurno: 19[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 20 Amarillo 0 5
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 2.14988 segundos[0m
+301 MOVED sent
+Move: 20 Amarillo 0 5
+[1;36m----------------[0m
+[1;36mTurno: 20[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 21 Amarillo 0 4
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.511853 segundos[0m
+301 MOVED sent
+Move: 21 Amarillo 0 4
+[1;36m----------------[0m
+[1;36mTurno: 21[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 0 4[0m
+[1;37m====================[0m
+[1;37mNodos generados: 80906[0m
+[1;37mNodos evaluados: 29653[0m
+[1;32mTotal de nodos: 110559[0m
+[1;32mTiempo de generación+evaluación: 2.91039[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 3.0159 segundos[0m
+301 MOVED sent
+Move: 22 Azul 0 4
+[1;36m----------------[0m
+[1;36mTurno: 22[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 0 2[0m
+[1;37m====================[0m
+[1;37mNodos generados: 346345[0m
+[1;37mNodos evaluados: 84591[0m
+[1;32mTotal de nodos: 430936[0m
+[1;32mTiempo de generación+evaluación: 8.9547[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 9.39127 segundos[0m
+301 MOVED sent
+Move: 23 Azul 0 2
+[1;36m----------------[0m
+[1;36mTurno: 23[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 10[0m
+[1;37m====================[0m
+[1;37mNodos generados: 220704[0m
+[1;37mNodos evaluados: 62012[0m
+[1;32mTotal de nodos: 282716[0m
+[1;32mTiempo de generación+evaluación: 6.28625[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 6.56578 segundos[0m
+301 MOVED sent
+Move: 24 Rojo 0 10
+[1;36m----------------[0m
+[1;36mTurno: 24[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 22 Azul 0 4
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 23 Azul 0 2
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 24 Rojo 0 10
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 25 Amarillo 0 69
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.790257 segundos[0m
+301 MOVED sent
+Move: 25 Amarillo 0 69
+[1;36m----------------[0m
+[1;36mTurno: 25[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 26 Amarillo 0 2
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.052394 segundos[0m
+301 MOVED sent
+Move: 26 Amarillo 0 2
+[1;36m----------------[0m
+[1;36mTurno: 26[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 1[0m
+[1;37m====================[0m
+[1;37mNodos generados: 324109[0m
+[1;37mNodos evaluados: 42740[0m
+[1;32mTotal de nodos: 366849[0m
+[1;32mTiempo de generación+evaluación: 7.96184[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 8.49031 segundos[0m
+301 MOVED sent
+Move: 27 Rojo 0 1
+[1;36m----------------[0m
+[1;36mTurno: 27[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 69[0m
+[1;37m====================[0m
+[1;37mNodos generados: 305894[0m
+[1;37mNodos evaluados: 110852[0m
+[1;32mTotal de nodos: 416746[0m
+[1;32mTiempo de generación+evaluación: 10.3044[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 10.7302 segundos[0m
+301 MOVED sent
+Move: 28 Rojo 0 69
+[1;36m----------------[0m
+[1;36mTurno: 28[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 27 Rojo 0 1
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 28 Rojo 0 69
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 29 Amarillo 0 1
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.03175 segundos[0m
+301 MOVED sent
+Move: 29 Amarillo 0 1
+[1;36m----------------[0m
+[1;36mTurno: 29[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 30 Amarillo 0 6
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 2.62077 segundos[0m
+301 MOVED sent
+Move: 30 Amarillo 0 6
+[1;36m----------------[0m
+[1;36mTurno: 30[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 31 Verde 0 5
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.24069 segundos[0m
+301 MOVED sent
+Move: 31 Verde 0 5
+[1;36m----------------[0m
+[1;36mTurno: 31[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 5[0m
+[1;37m====================[0m
+[1;37mNodos generados: 468348[0m
+[1;37mNodos evaluados: 73873[0m
+[1;32mTotal de nodos: 542221[0m
+[1;32mTiempo de generación+evaluación: 10.7342[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 11.5463 segundos[0m
+301 MOVED sent
+Move: 32 Azul 1 5
+[1;36m----------------[0m
+[1;36mTurno: 32[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 2[0m
+[1;37m====================[0m
+[1;37mNodos generados: 135731[0m
+[1;37mNodos evaluados: 42620[0m
+[1;32mTotal de nodos: 178351[0m
+[1;32mTiempo de generación+evaluación: 4.5883[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 4.84698 segundos[0m
+301 MOVED sent
+Move: 33 Azul 1 2
+[1;36m----------------[0m
+[1;36mTurno: 33[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 32 Azul 1 5
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 33 Azul 1 2
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 34 Amarillo 0 69
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.41498 segundos[0m
+301 MOVED sent
+Move: 34 Amarillo 0 69
+[1;36m----------------[0m
+[1;36mTurno: 34[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 35 Amarillo 0 4
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.0214914 segundos[0m
+301 MOVED sent
+Move: 35 Amarillo 0 4
+[1;36m----------------[0m
+[1;36mTurno: 35[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 6[0m
+[1;37m====================[0m
+[1;37mNodos generados: 94321[0m
+[1;37mNodos evaluados: 15461[0m
+[1;32mTotal de nodos: 109782[0m
+[1;32mTiempo de generación+evaluación: 4.35123[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 4.62513 segundos[0m
+301 MOVED sent
+Move: 36 Rojo 0 6
+[1;36m----------------[0m
+[1;36mTurno: 36[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 4[0m
+[1;37m====================[0m
+[1;37mNodos generados: 134728[0m
+[1;37mNodos evaluados: 40894[0m
+[1;32mTotal de nodos: 175622[0m
+[1;32mTiempo de generación+evaluación: 5.8582[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 6.16241 segundos[0m
+301 MOVED sent
+Move: 37 Azul 1 4
+[1;36m----------------[0m
+[1;36mTurno: 37[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 69[0m
+[1;37m====================[0m
+[1;37mNodos generados: 620582[0m
+[1;37mNodos evaluados: 306887[0m
+[1;32mTotal de nodos: 927469[0m
+[1;32mTiempo de generación+evaluación: 25.7559[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 26.8774 segundos[0m
+301 MOVED sent
+Move: 38 Azul 1 69
+[1;36m----------------[0m
+[1;36mTurno: 38[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 36 Rojo 0 6
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 37 Azul 1 4
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 38 Azul 1 69
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 39 Amarillo 0 2
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 3.87314 segundos[0m
+301 MOVED sent
+Move: 39 Amarillo 0 2
+[1;36m----------------[0m
+[1;36mTurno: 39[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 40 Amarillo 0 1
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.63827 segundos[0m
+301 MOVED sent
+Move: 40 Amarillo 0 1
+[1;36m----------------[0m
+[1;36mTurno: 40[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 1[0m
+[1;37m====================[0m
+[1;37mNodos generados: 978347[0m
+[1;37mNodos evaluados: 182097[0m
+[1;32mTotal de nodos: 1160444[0m
+[1;32mTiempo de generación+evaluación: 17.6228[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 18.7648 segundos[0m
+301 MOVED sent
+Move: 41 Rojo 0 1
+[1;36m----------------[0m
+[1;36mTurno: 41[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+[1;38;5;208mMovimiento elegido: Azul 1 1[0m
+[1;37m====================[0m
+[1;37mNodos generados: 2481486[0m
+[1;37mNodos evaluados: 1018521[0m
+[1;33mTotal de nodos: 3500007[0m
+[1;32mTiempo de generación+evaluación: 72.022[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 75.0248 segundos[0m
+301 MOVED sent
+Move: 42 Azul 1 1
+[1;36m----------------[0m
+[1;36mTurno: 42[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 41 Rojo 0 1
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 42 Azul 1 1
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 43 Verde 1 69
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 2.2638 segundos[0m
+301 MOVED sent
+Move: 43 Verde 1 69
+[1;36m----------------[0m
+[1;36mTurno: 43[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 44 Verde 1 4
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.717384 segundos[0m
+301 MOVED sent
+Move: 44 Verde 1 4
+[1;36m----------------[0m
+[1;36mTurno: 44[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 45 Verde 1 20
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.202165 segundos[0m
+301 MOVED sent
+Move: 45 Verde 1 20
+[1;36m----------------[0m
+[1;36mTurno: 45[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 6[0m
+[1;37m====================[0m
+[1;37mNodos generados: 150071[0m
+[1;37mNodos evaluados: 18647[0m
+[1;32mTotal de nodos: 168718[0m
+[1;32mTiempo de generación+evaluación: 1.77184[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.90629 segundos[0m
+301 MOVED sent
+Move: 46 Rojo 0 6
+[1;36m----------------[0m
+[1;36mTurno: 46[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 5[0m
+[1;37m====================[0m
+[1;37mNodos generados: 62220[0m
+[1;37mNodos evaluados: 16204[0m
+[1;32mTotal de nodos: 78424[0m
+[1;32mTiempo de generación+evaluación: 0.944551[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.00069 segundos[0m
+301 MOVED sent
+Move: 47 Rojo 0 5
+[1;36m----------------[0m
+[1;36mTurno: 47[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 4[0m
+[1;37m====================[0m
+[1;37mNodos generados: 16603[0m
+[1;37mNodos evaluados: 8964[0m
+[1;32mTotal de nodos: 25567[0m
+[1;32mTiempo de generación+evaluación: 0.35946[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.376095 segundos[0m
+301 MOVED sent
+Move: 48 Rojo 0 4
+[1;36m----------------[0m
+[1;36mTurno: 48[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 46 Rojo 0 6
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 47 Rojo 0 5
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 48 Rojo 0 4
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 49 Verde 1 6
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.301582 segundos[0m
+301 MOVED sent
+Move: 49 Verde 1 6
+[1;36m----------------[0m
+[1;36mTurno: 49[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 50 Amarillo 0 10
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.2058e-05 segundos[0m
+301 MOVED sent
+Move: 50 Amarillo 0 10
+[1;36m----------------[0m
+[1;36mTurno: 50[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 51 Amarillo 0 5
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 6.385e-06 segundos[0m
+301 MOVED sent
+Move: 51 Amarillo 0 5
+[1;36m----------------[0m
+[1;36mTurno: 51[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 52 Amarillo 1 2
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 7.061e-06 segundos[0m
+301 MOVED sent
+Move: 52 Amarillo 1 2
+[1;36m----------------[0m
+[1;36mTurno: 52[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 2[0m
+[1;37m====================[0m
+[1;37mNodos generados: 8565[0m
+[1;37mNodos evaluados: 1710[0m
+[1;32mTotal de nodos: 10275[0m
+[1;32mTiempo de generación+evaluación: 0.101553[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.109848 segundos[0m
+301 MOVED sent
+Move: 53 Rojo 0 2
+[1;36m----------------[0m
+[1;36mTurno: 53[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 69[0m
+[1;37m====================[0m
+[1;37mNodos generados: 37341[0m
+[1;37mNodos evaluados: 15763[0m
+[1;32mTotal de nodos: 53104[0m
+[1;32mTiempo de generación+evaluación: 0.605212[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.647952 segundos[0m
+301 MOVED sent
+Move: 54 Rojo 0 69
+[1;36m----------------[0m
+[1;36mTurno: 54[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 53 Rojo 0 2
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 54 Rojo 0 69
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 55 Amarillo 0 1
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.08507 segundos[0m
+301 MOVED sent
+Move: 55 Amarillo 0 1
+[1;36m----------------[0m
+[1;36mTurno: 55[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 56 Amarillo 1 10
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.409813 segundos[0m
+301 MOVED sent
+Move: 56 Amarillo 1 10
+[1;36m----------------[0m
+[1;36mTurno: 56[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 57 Amarillo 1 6
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.307077 segundos[0m
+301 MOVED sent
+Move: 57 Amarillo 1 6
+[1;36m----------------[0m
+[1;36mTurno: 57[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 58 Amarillo 1 5
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.306166 segundos[0m
+301 MOVED sent
+Move: 58 Amarillo 1 5
+[1;36m----------------[0m
+[1;36mTurno: 58[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 5[0m
+[1;37m====================[0m
+[1;37mNodos generados: 32883[0m
+[1;37mNodos evaluados: 10462[0m
+[1;32mTotal de nodos: 43345[0m
+[1;32mTiempo de generación+evaluación: 0.444225[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.48036 segundos[0m
+301 MOVED sent
+Move: 59 Azul 1 5
+[1;36m----------------[0m
+[1;36mTurno: 59[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 6[0m
+[1;37m====================[0m
+[1;37mNodos generados: 18783[0m
+[1;37mNodos evaluados: 5737[0m
+[1;32mTotal de nodos: 24520[0m
+[1;32mTiempo de generación+evaluación: 0.256013[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.275918 segundos[0m
+301 MOVED sent
+Move: 60 Azul 1 6
+[1;36m----------------[0m
+[1;36mTurno: 60[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Rojo 0 1[0m
+[1;37m====================[0m
+[1;37mNodos generados: 7909[0m
+[1;37mNodos evaluados: 4365[0m
+[1;32mTotal de nodos: 12274[0m
+[1;32mTiempo de generación+evaluación: 0.14249[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.151087 segundos[0m
+301 MOVED sent
+Move: 61 Rojo 0 1
+[1;36m----------------[0m
+[1;36mTurno: 61[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 10[0m
+[1;37m====================[0m
+[1;37mNodos generados: 2293[0m
+[1;37mNodos evaluados: 1037[0m
+[1;32mTotal de nodos: 3330[0m
+[1;32mTiempo de generación+evaluación: 0.0358975[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.0382819 segundos[0m
+301 MOVED sent
+Move: 62 Azul 1 10
+[1;36m----------------[0m
+[1;36mTurno: 62[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 59 Azul 1 5
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 60 Azul 1 6
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 61 Rojo 0 1
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 62 Azul 1 10
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 63 Amarillo 1 69
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.195432 segundos[0m
+301 MOVED sent
+Move: 63 Amarillo 1 69
+[1;36m----------------[0m
+[1;36mTurno: 63[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 64 Amarillo 1 4
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.2052e-05 segundos[0m
+301 MOVED sent
+Move: 64 Amarillo 1 4
+[1;36m----------------[0m
+[1;36mTurno: 64[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 4[0m
+[1;37m====================[0m
+[1;37mNodos generados: 1386[0m
+[1;37mNodos evaluados: 931[0m
+[1;32mTotal de nodos: 2317[0m
+[1;32mTiempo de generación+evaluación: 0.0254425[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.0272873 segundos[0m
+301 MOVED sent
+Move: 65 Azul 1 4
+[1;36m----------------[0m
+[1;36mTurno: 65[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 2[0m
+[1;37m====================[0m
+[1;37mNodos generados: 6496[0m
+[1;37mNodos evaluados: 2899[0m
+[1;32mTotal de nodos: 9395[0m
+[1;32mTiempo de generación+evaluación: 0.0990777[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.107298 segundos[0m
+301 MOVED sent
+Move: 66 Azul 1 2
+[1;36m----------------[0m
+[1;36mTurno: 66[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 65 Azul 1 4
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 66 Azul 1 2
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 67 Amarillo 1 2
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.274848 segundos[0m
+301 MOVED sent
+Move: 67 Amarillo 1 2
+[1;36m----------------[0m
+[1;36mTurno: 67[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 68 Amarillo 1 1
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.1077e-05 segundos[0m
+301 MOVED sent
+Move: 68 Amarillo 1 1
+[1;36m----------------[0m
+[1;36mTurno: 68[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 69 Verde 0 10
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 1.0499e-05 segundos[0m
+301 MOVED sent
+Move: 69 Verde 0 10
+[1;36m----------------[0m
+[1;36mTurno: 69[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 69[0m
+[1;37m====================[0m
+[1;37mNodos generados: 1613[0m
+[1;37mNodos evaluados: 800[0m
+[1;32mTotal de nodos: 2413[0m
+[1;32mTiempo de generación+evaluación: 0.0182076[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.0198999 segundos[0m
+301 MOVED sent
+Move: 70 Azul 1 69
+[1;36m----------------[0m
+[1;36mTurno: 70[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 6[0m
+[1;37m====================[0m
+[1;37mNodos generados: 948[0m
+[1;37mNodos evaluados: 838[0m
+[1;32mTotal de nodos: 1786[0m
+[1;32mTiempo de generación+evaluación: 0.0134036[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.0144543 segundos[0m
+301 MOVED sent
+Move: 71 Azul 1 6
+[1;36m----------------[0m
+[1;36mTurno: 71[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+[1;38;5;208mMovimiento elegido: Azul 1 5[0m
+[1;37m====================[0m
+[1;37mNodos generados: 431[0m
+[1;37mNodos evaluados: 930[0m
+[1;32mTotal de nodos: 1361[0m
+[1;32mTiempo de generación+evaluación: 0.00786545[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.00838468 segundos[0m
+301 MOVED sent
+Move: 72 Azul 1 5
+[1;36m----------------[0m
+[1;36mTurno: 72[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 70 Azul 1 69
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 71 Azul 1 6
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 72 Azul 1 5
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 73 Verde 0 6
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 0.205048 segundos[0m
+301 MOVED sent
+Move: 73 Verde 0 6
+[1;36m----------------[0m
+[1;36mTurno: 73[0m
+[1;32mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 74 Verde 0 5
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 8.446e-06 segundos[0m
+301 MOVED sent
+Move: 74 Verde 0 5
+[1;36m----------------[0m
+[1;36mTurno: 74[0m
+[1;33mJugador actual: 1 (Ninja 1: ¿Asequible?)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 75 Verde 0 1
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 7.554e-06 segundos[0m
+301 MOVED sent
+Move: 75 Verde 0 1
+[1;35m++++++++++++++++++++++++[0m
+[1;35mLa partida ha terminado[0m
+[1;35mHa ganado el jugador 1 (Amarillo)[0m
+[1;35m¡¡¡ENHORABUENA, Ninja 1: ¿Asequible?!!![0m
+[1;35m++++++++++++++++++++++++[0m

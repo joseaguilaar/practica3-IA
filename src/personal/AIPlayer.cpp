@@ -36,7 +36,7 @@ void AIPlayer::think(color& c_piece, int& id_piece, int& dice) const
    switch (id)
    {
       case 0:
-      valor = Poda_AlfaBeta(*actual, jugador, 0, PROFUNDIDAD_ALFABETA, c_piece, id_piece, dice, alpha, beta, &valoracionTest);
+      valor = Poda_AlfaBeta(*actual, jugador, 0, PROFUNDIDAD_ALFABETA, c_piece, id_piece, dice, alpha, beta, &heuristica1);
       break;
 
       case 1:
@@ -466,6 +466,12 @@ float ValoracionTest::getHeuristic(const Parchis& estado, int jugador) const{
 
 float Heuristica1::getHeuristic(const Parchis &estado, int jugador) const
 {
+   const float PEN_BARR = 0.3;
+   const int RANGO_BARR = 25;
+
+   float puntuacion_jugador = 0;
+   float puntuacion_oponente = 0;
+
    int ganador = estado.getWinner();
    int oponente = (jugador + 1) % 2;
 
@@ -482,9 +488,16 @@ float Heuristica1::getHeuristic(const Parchis &estado, int jugador) const
       vector<color> op_colors = estado.getPlayerColors(oponente);
 
       //.......................................
-      // Recorro todas las fichas de mi jugador
-      int puntuacion_jugador = 0;
+      //Vemos si estamos en la fase final de la partida
 
+      bool faseFinal = ( (estado.piecesAtGoal(my_colors[0]) + estado.piecesAtGoal(my_colors[1])) == 3 ||
+                         (estado.piecesAtGoal(op_colors[0]) + estado.piecesAtGoal(op_colors[1])) == 3  );
+
+      float bonus_faseFinal = faseFinal ? 1 : 1;
+
+      //.......................................
+      // Recorro todas las fichas de mi jugador
+      
       // Recorro colores de mi jugador.
       for (int i = 0; i < my_colors.size(); i++){
 
@@ -493,25 +506,82 @@ float Heuristica1::getHeuristic(const Parchis &estado, int jugador) const
          // Recorro las fichas de ese color.
          for (int j = 0; j < num_pieces; j++){
 
-            //1 Valoro positivamente que la ficha esté en casilla segura o meta.
+            //1 Valoro positivamente que la ficha esté en casilla segura.
             if (estado.isSafePiece(c, j)){
-               puntuacion_jugador++;
+               puntuacion_jugador += 1/bonus_faseFinal; 
             }
             //2 Valoro positivo si esta en casilla meta
             else if (estado.getBoard().getPiece(c, j).get_box().type == goal){
-               puntuacion_jugador += 5;
+               puntuacion_jugador += 5*bonus_faseFinal ;
             }
+
+            // //3 Valoro negativo si esta en casa
+            // if (estado.getBoard().getPiece(c, j).get_box().type == home)
+            //    puntuacion_jugador -= 3*bonus_faseFinal;
+            
+            // //Valoro negativo que haya rebote
+            // if(estado.goalBounce()) 
+            //    puntuacion_jugador -= 5;
+
             //3 Valoro mas negativo cuanto mas lejos de la meta esta
-            puntuacion_jugador -= estado.distanceToGoal(c,j);
+            puntuacion_jugador -= estado.distanceToGoal(c,j)*bonus_faseFinal;
+
+            //5 Amenaza de ser comido y gestion de barreras
+            Box posicion = estado.getBoard().getPiece(c,j).get_box();
+            posicion.num = (((posicion.num - 30) % 68 + 68 ) % 68 );
+
+            vector<pair<color,int>> fichas = estado.allPiecesBetween(posicion, estado.getBoard().getPiece(c,j).get_box() );
+            
+            for( int k=0; k<fichas.size(); k++ ){
+               //si hay fichas del oponenete en las 14 casillas de detrás
+               if( fichas[k].first == op_colors[0] || fichas[k].first == op_colors[1] ){
+                  puntuacion_jugador-= 3/bonus_faseFinal;
+                  
+                  // //Gestion de Barreras
+                  // if( estado.isWall( estado.getBoard().getPiece(c,j).get_box() ) ){
+                  //    puntuacion_jugador += 1*bonus_faseFinal;
+
+                  //    if( estado.distanceToGoal(fichas[k].first, fichas[k].second) < 20 ) //añado un plus si al rival le queda poca distancia a meta
+                  //       puntuacion_jugador += 1*bonus_faseFinal;
+                  // }
+               }
+            }
+
+            // //Amenaza 2
+            // vector<pair<color,int>> fichas = estado.allPiecesBetween(estado.getBoard().getPiece(c,j).get_box(), estado.getFinalBox(c) );
+            // for( int k=0; k<fichas.size(); k++ ){
+            //    if( fichas[k].first == op_colors[0] || fichas[k].first == op_colors[1] ){
+            //       puntuacion_jugador+= 1/bonus_faseFinal;   //valoro positivamente que haya jugadores rivales delante
+            //    }
+            // }
+
+            
+            //Gestion de Barreras 2
+            if( estado.getBoard().getPiece(c,j).get_box().type != final_queue ){
+
+               vector<color> barreras = estado.anyWall(estado.getBoard().getPiece(c,j).get_box(), estado.getFinalBox(c) );
+
+               for( int k=0; k<barreras.size(); k++ ){
+
+                  int d = min(estado.distanceBoxtoBox(c, j, barreras[k], 0), RANGO_BARR);
+
+                  if( barreras[k]==op_colors[0] || barreras[k]==op_colors[1] )
+                     puntuacion_jugador -= PEN_BARR  * (RANGO_BARR-d);
+
+                  if( barreras[k]==my_colors[0] || barreras[k]==my_colors[1] )
+                     puntuacion_jugador -= 0.15  * (RANGO_BARR-d);
+               }
+            }
+            
          }
 
-         //4 Valoro negativo cuantas mas piezas haya en casa
-         puntuacion_jugador -= estado.piecesAtHome(c)*2;
+         //6 Valoro negativo cuantas mas piezas haya en casa
+         puntuacion_jugador -= estado.piecesAtHome(c)*2 * bonus_faseFinal;
       }
 
       //.......................................
       // Recorro todas las fichas del oponente
-      int puntuacion_oponente = 0;
+      float puntuacion_oponente = 0;
 
       // Recorro colores del oponente.
       for (int i = 0; i < op_colors.size(); i++){
@@ -521,21 +591,81 @@ float Heuristica1::getHeuristic(const Parchis &estado, int jugador) const
          // Recorro las fichas de ese color.
          for (int j = 0; j < num_pieces; j++){
 
-            // Valoro negativamente que la ficha esté en casilla segura o meta.
+            //1 Valoro negativamente que la ficha esté en casilla segura o meta.
             if (estado.isSafePiece(c, j)){
-               puntuacion_oponente++;
+               puntuacion_oponente += 1/bonus_faseFinal;
             }
-            // Valoro negativo si esta en casilla meta
+            //2 Valoro negativo si esta en casilla meta
             else if (estado.getBoard().getPiece(c, j).get_box().type == goal){
-               puntuacion_oponente += 5;
+               puntuacion_oponente += 5*bonus_faseFinal;
+            }
+            // //3 Valoro positivo si esta en casa
+            // if (estado.getBoard().getPiece(c, j).get_box().type == home)
+            //    puntuacion_oponente -= 3*bonus_faseFinal;
+            
+            // // Valoro positivo que haya rebote
+            // if(estado.goalBounce()) 
+            //    puntuacion_oponente -= 5;
+
+
+            //3 Valoro positivo cuanto mas lejos de la meta esta
+            puntuacion_oponente -= estado.distanceToGoal(c,j)*bonus_faseFinal;
+
+            //5 Amenaza de ser comido y gestion de barreras
+            Box posicion = estado.getBoard().getPiece(c,j).get_box();
+            posicion.num = (((posicion.num - 30) % 68 + 68 ) % 68 );
+
+            vector<pair<color,int>> fichas = estado.allPiecesBetween(posicion, estado.getBoard().getPiece(c,j).get_box() );
+            
+            for( int k=0; k<fichas.size(); k++ ){
+               //si hay fichas del oponenete en las 14 casillas de detrás
+               if( fichas[k].first == my_colors[0] || fichas[k].first == my_colors[1] ){
+                  puntuacion_oponente-= 3/bonus_faseFinal;
+                  
+                  // //Gestion de Barreras
+                  // if( estado.isWall( estado.getBoard().getPiece(c,j).get_box() ) ){
+                  //    puntuacion_oponente += 1*bonus_faseFinal;
+
+                  //    if( estado.distanceToGoal(fichas[k].first, fichas[k].second) < 20 ) //añado un plus si al rival le queda poca distancia a meta
+                  //       puntuacion_oponente += 1*bonus_faseFinal;
+                  // }
+               }
             }
 
-            // Valoro positivo cuanto mas lejos de la meta esta
-            puntuacion_oponente -= estado.distanceToGoal(c,j);
-         }
+            // //Amenaza 2
+            // vector<pair<color,int>> fichas = estado.allPiecesBetween(estado.getBoard().getPiece(c,j).get_box(), estado.getFinalBox(c) );
+            // for( int k=0; k<fichas.size(); k++ ){
+            //    if( fichas[k].first == my_colors[0] || fichas[k].first == my_colors[1] ){
+            //       puntuacion_oponente+= 1/bonus_faseFinal;  //valoro negativamente que haya jugadores rivales delante
+            //    }
+            // }
 
-         //Valoro positivo cuantas mas piezas haya en casa
-         puntuacion_jugador -= estado.piecesAtHome(c)*2;
+            //Gestion de Barreras 2
+            if( estado.getBoard().getPiece(c,j).get_box().type != final_queue ){
+
+               const int caminillo_final = 8;
+               Box ini_caminillo = estado.getBoard().getPiece(c,j).get_box();
+               ini_caminillo.num = (ini_caminillo.num + (estado.distanceToGoal(c,j)-caminillo_final)) % 68;
+
+               vector<color> barreras = estado.anyWall(estado.getBoard().getPiece(c,j).get_box(), estado.getFinalBox(c) );
+
+               for( int k=0; k<barreras.size(); k++ ){
+
+                  int d = min(estado.distanceBoxtoBox(c, j, barreras[k], 0), RANGO_BARR);
+
+                  if( barreras[k]==my_colors[0] || barreras[k]==my_colors[1] )
+                     puntuacion_oponente -= PEN_BARR  * (RANGO_BARR-d);
+
+                  if( barreras[k]==op_colors[0] || barreras[k]==op_colors[1] )
+                     puntuacion_jugador -= 0.15  * (RANGO_BARR-d);
+               }            
+            }
+
+
+         }
+         
+         //6 Valoro positivo cuantas mas piezas haya en casa
+         puntuacion_oponente -= estado.piecesAtHome(c)*2 * bonus_faseFinal;
       }
 
       //.......................................
@@ -548,21 +678,34 @@ float Heuristica1::getHeuristic(const Parchis &estado, int jugador) const
          if (eatenPiece.first == my_colors[0] || eatenPiece.first == my_colors[1]){
 
                // Si se ha comido el jugador a él mismo   //posible mejora: que sume puntuacion cuando sea ficha comida cerca de la casilla de salida
-               if (estado.getCurrentPlayerId() == jugador)
-                  puntuacion_jugador -= 5;
+               if (estado.getCurrentPlayerId() == jugador){
+
+                  // int distanciaMeta = estado.distanceToGoal(eatenPiece.first, eatenPiece.second);
+
+                  // float factor = float(72 - distanciaMeta) / 72;
+                  // factor = clamp(factor, 0.0f, 1.0f);
+                  
+                  puntuacion_jugador += (-5); //+ 20*factor);
+               }
                // Si le ha comido el oponente
                else
-                  puntuacion_jugador -= 10;
+                  puntuacion_jugador -= 30*bonus_faseFinal;
          }
          // Si la ficha comida es del oponente
          else{
 
                // Si se ha comido el oponente a sí mismo
-               if (estado.getCurrentPlayerId() == oponente)
-                  puntuacion_oponente -= 5;
+               if (estado.getCurrentPlayerId() == oponente){
+                  int distanciaMeta = estado.distanceToGoal(eatenPiece.first, eatenPiece.second);
+
+                  float factor = float(72 - distanciaMeta) / 72;
+                  factor = clamp(factor, 0.0f, 1.0f);
+
+                  puntuacion_oponente += ((-5) + 20*factor);  
+               }
                // Si le ha comido el jugador
                else
-                  puntuacion_oponente -= 10;
+                  puntuacion_oponente -= 30*bonus_faseFinal;
          }
       }
 
@@ -571,134 +714,6 @@ float Heuristica1::getHeuristic(const Parchis &estado, int jugador) const
       return puntuacion_jugador - puntuacion_oponente;
    }
 }
-
-
-
-// float Heuristica1::getHeuristic(const Parchis &estado, int jugador) const
-// {
-//    int ganador = estado.getWinner();
-//    int oponente = (jugador+1) % 2;
-
-//    // Si hay un ganador, devuelvo más/menos infinito, según si he ganado yo o el oponente.
-//    if (ganador == jugador)
-//    {
-//       return gana;
-//    }
-//    else if (ganador == oponente)
-//    {
-//       return pierde;
-//    }
-//    else
-//    {
-//       // Colores que juega mi jugador y colores del oponente
-//       vector<color> my_colors = estado.getPlayerColors(jugador);
-//       vector<color> op_colors = estado.getPlayerColors(oponente);
-
-//       //-----------------------------------------------------
-//       // Recorro todas las fichas de mi jugador
-//       int puntuacion_jugador = 0;
-//       // Recorro colores de mi jugador.
-//       for (int i = 0; i < my_colors.size(); i++)
-//       {
-//          color c = my_colors[i];
-
-//          // Recorro las fichas de ese color.
-//          for (int j = 0; j < num_pieces; j++)
-//          {
-//                // Valoro positivamente que la ficha esté en casilla segura.
-//                if (estado.isSafePiece(c, j))
-//                {
-//                   puntuacion_jugador++;
-//                }
-//                // Casilla meta
-//                else if (estado.getBoard().getPiece(c, j).get_box().type == goal)
-//                {
-//                   puntuacion_jugador += 5;
-//                }
-               
-//                // Valorar negativamente cuanto mayor sea la distancia al goal
-//                puntuacion_jugador -= estado.distanceToGoal(c, j);
-//          }
-
-//          // Valorar negativamente cuantas más piezas tenga el jugador en casa
-//          puntuacion_jugador -= estado.piecesAtHome(c)*2;
-//       }
-
-//    //   // Esta situación es muy mala
-//    //   if ((estado.piecesAtGoal(my_colors[0]) + estado.piecesAtHome(my_colors[0]) == 3)
-//    //       && (estado.piecesAtGoal(my_colors[1]) + estado.piecesAtHome(my_colors[1]) == 3))
-//    //       puntuacion_jugador -= 50;
-
-
-//       //-----------------------------------------------------
-//       // Recorro todas las fichas del oponente
-//       int puntuacion_oponente = 0;
-//       // Recorro colores del oponente.
-//       for (int i = 0; i < op_colors.size(); i++)
-//       {
-//          color c = op_colors[i];
-
-//          // Recorro las fichas de ese color.
-//          for (int j = 0; j < num_pieces; j++)
-//          {
-//                // Valoro negativamente que la ficha esté en casilla segura.
-//                if (estado.isSafePiece(c, j))
-//                {
-//                   puntuacion_oponente++;
-//                }
-//                // Casilla meta
-//                else if (estado.getBoard().getPiece(c, j).get_box().type == goal)
-//                {
-//                   puntuacion_oponente += 5;
-//                }
-
-//                // Valorar positivamente cuanto mayor sea la distancia al goal
-//                puntuacion_oponente -= estado.distanceToGoal(c, j);
-//          }
-                     
-//          // Valorar positivamente cuantas más piezas tenga el oponente en casa
-//          puntuacion_oponente -= estado.piecesAtHome(c)*2;
-//       }
-
-//    //   // Esta situación es muy buena
-//    //   if ((estado.piecesAtGoal(op_colors[0]) + estado.piecesAtHome(op_colors[0]) == 3)
-//    //       && (estado.piecesAtGoal(op_colors[1]) + estado.piecesAtHome(op_colors[1]) == 3))
-//    //       puntuacion_oponente -= 50;
-
-//       //-----------------------------------------------------
-//       // Comprobar si se ha comido ficha
-//       if (estado.isEatingMove()){
-
-//          pair<color,int> eatenPiece = estado.eatenPiece();
-         
-//          // Si la ficha comida es del jugador
-//          if (eatenPiece.first == my_colors[0] || eatenPiece.first == my_colors[1]){
-
-//                // Si se ha comido el jugador a él mismo
-//                if (estado.getCurrentPlayerId() == jugador)
-//                   puntuacion_jugador -= 5;
-//                // Si le ha comido el oponente
-//                else
-//                   puntuacion_jugador -= 10;
-//          }
-//          // Si la ficha comida es del oponente
-//          else{
-
-//                // Si se ha comido el oponente a sí mismo
-//                if (estado.getCurrentPlayerId() == oponente)
-//                   puntuacion_oponente -= 5;
-//                // Si le ha comido el jugador
-//                else
-//                   puntuacion_oponente -= 10;
-//          }
-//       }
-
-//       // Devuelvo la puntuación de mi jugador menos la puntuación del oponente.
-//       return puntuacion_jugador - puntuacion_oponente;
-//    }
-// }
-
-
 
 float AIPlayer::Poda_AlfaBeta(const Parchis &actual, int jugador, int profundidad, int profundidad_max, color &c_piece, int &id_piece, int &dice, float alpha, float beta, Heuristic *heuristic) const
 {
