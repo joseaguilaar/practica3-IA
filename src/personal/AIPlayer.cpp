@@ -30,6 +30,7 @@ void AIPlayer::think(color& c_piece, int& id_piece, int& dice) const
    float alpha = menosinf, beta = masinf; // Cotas iniciales de la poda AlfaBeta
    // // Llamada a la función para la poda (los parámetros son solo una sugerencia, se pueden modificar).
    ValoracionTest valoracionTest;
+   Heuristica1 heuristica1;
 
    // ----------------------------------------------------------------- //
    switch (id)
@@ -43,6 +44,7 @@ void AIPlayer::think(color& c_piece, int& id_piece, int& dice) const
       break;
 
       case 2:
+      valor = OrdenacionMovimientos(*actual, jugador, 0, PROFUNDIDAD_ALFABETA, c_piece, id_piece, dice, alpha, beta, &heuristica1);
       break;
 
       case 3:
@@ -462,6 +464,241 @@ float ValoracionTest::getHeuristic(const Parchis& estado, int jugador) const{
    }
 }
 
+float Heuristica1::getHeuristic(const Parchis &estado, int jugador) const
+{
+   int ganador = estado.getWinner();
+   int oponente = (jugador + 1) % 2;
+
+   // Si hay un ganador, devuelvo más/menos infinito, según si he ganado yo o el oponente.
+   if (ganador == jugador){
+      return gana;
+   }
+   else if (ganador == oponente){
+      return pierde;
+   }
+   else{
+      // Colores que juega mi jugador y colores del oponente
+      vector<color> my_colors = estado.getPlayerColors(jugador);
+      vector<color> op_colors = estado.getPlayerColors(oponente);
+
+      //.......................................
+      // Recorro todas las fichas de mi jugador
+      int puntuacion_jugador = 0;
+
+      // Recorro colores de mi jugador.
+      for (int i = 0; i < my_colors.size(); i++){
+
+         color c = my_colors[i];
+
+         // Recorro las fichas de ese color.
+         for (int j = 0; j < num_pieces; j++){
+
+            //1 Valoro positivamente que la ficha esté en casilla segura o meta.
+            if (estado.isSafePiece(c, j)){
+               puntuacion_jugador++;
+            }
+            //2 Valoro positivo si esta en casilla meta
+            else if (estado.getBoard().getPiece(c, j).get_box().type == goal){
+               puntuacion_jugador += 5;
+            }
+            //3 Valoro mas negativo cuanto mas lejos de la meta esta
+            puntuacion_jugador -= estado.distanceToGoal(c,j);
+         }
+
+         //4 Valoro negativo cuantas mas piezas haya en casa
+         puntuacion_jugador -= estado.piecesAtHome(c)*2;
+      }
+
+      //.......................................
+      // Recorro todas las fichas del oponente
+      int puntuacion_oponente = 0;
+
+      // Recorro colores del oponente.
+      for (int i = 0; i < op_colors.size(); i++){
+
+         color c = op_colors[i];
+
+         // Recorro las fichas de ese color.
+         for (int j = 0; j < num_pieces; j++){
+
+            // Valoro negativamente que la ficha esté en casilla segura o meta.
+            if (estado.isSafePiece(c, j)){
+               puntuacion_oponente++;
+            }
+            // Valoro negativo si esta en casilla meta
+            else if (estado.getBoard().getPiece(c, j).get_box().type == goal){
+               puntuacion_oponente += 5;
+            }
+
+            // Valoro positivo cuanto mas lejos de la meta esta
+            puntuacion_oponente -= estado.distanceToGoal(c,j);
+         }
+
+         //Valoro positivo cuantas mas piezas haya en casa
+         puntuacion_jugador -= estado.piecesAtHome(c)*2;
+      }
+
+      //.......................................
+      //5 Comida de ficha
+      if( estado.isEatingMove() ){
+
+         pair<color,int> eatenPiece = estado.eatenPiece();
+
+         //comida a mi jugador
+         if (eatenPiece.first == my_colors[0] || eatenPiece.first == my_colors[1]){
+
+               // Si se ha comido el jugador a él mismo   //posible mejora: que sume puntuacion cuando sea ficha comida cerca de la casilla de salida
+               if (estado.getCurrentPlayerId() == jugador)
+                  puntuacion_jugador -= 5;
+               // Si le ha comido el oponente
+               else
+                  puntuacion_jugador -= 10;
+         }
+         // Si la ficha comida es del oponente
+         else{
+
+               // Si se ha comido el oponente a sí mismo
+               if (estado.getCurrentPlayerId() == oponente)
+                  puntuacion_oponente -= 5;
+               // Si le ha comido el jugador
+               else
+                  puntuacion_oponente -= 10;
+         }
+      }
+
+
+      // Devuelvo la puntuación de mi jugador menos la puntuación del oponente.
+      return puntuacion_jugador - puntuacion_oponente;
+   }
+}
+
+
+
+// float Heuristica1::getHeuristic(const Parchis &estado, int jugador) const
+// {
+//    int ganador = estado.getWinner();
+//    int oponente = (jugador+1) % 2;
+
+//    // Si hay un ganador, devuelvo más/menos infinito, según si he ganado yo o el oponente.
+//    if (ganador == jugador)
+//    {
+//       return gana;
+//    }
+//    else if (ganador == oponente)
+//    {
+//       return pierde;
+//    }
+//    else
+//    {
+//       // Colores que juega mi jugador y colores del oponente
+//       vector<color> my_colors = estado.getPlayerColors(jugador);
+//       vector<color> op_colors = estado.getPlayerColors(oponente);
+
+//       //-----------------------------------------------------
+//       // Recorro todas las fichas de mi jugador
+//       int puntuacion_jugador = 0;
+//       // Recorro colores de mi jugador.
+//       for (int i = 0; i < my_colors.size(); i++)
+//       {
+//          color c = my_colors[i];
+
+//          // Recorro las fichas de ese color.
+//          for (int j = 0; j < num_pieces; j++)
+//          {
+//                // Valoro positivamente que la ficha esté en casilla segura.
+//                if (estado.isSafePiece(c, j))
+//                {
+//                   puntuacion_jugador++;
+//                }
+//                // Casilla meta
+//                else if (estado.getBoard().getPiece(c, j).get_box().type == goal)
+//                {
+//                   puntuacion_jugador += 5;
+//                }
+               
+//                // Valorar negativamente cuanto mayor sea la distancia al goal
+//                puntuacion_jugador -= estado.distanceToGoal(c, j);
+//          }
+
+//          // Valorar negativamente cuantas más piezas tenga el jugador en casa
+//          puntuacion_jugador -= estado.piecesAtHome(c)*2;
+//       }
+
+//    //   // Esta situación es muy mala
+//    //   if ((estado.piecesAtGoal(my_colors[0]) + estado.piecesAtHome(my_colors[0]) == 3)
+//    //       && (estado.piecesAtGoal(my_colors[1]) + estado.piecesAtHome(my_colors[1]) == 3))
+//    //       puntuacion_jugador -= 50;
+
+
+//       //-----------------------------------------------------
+//       // Recorro todas las fichas del oponente
+//       int puntuacion_oponente = 0;
+//       // Recorro colores del oponente.
+//       for (int i = 0; i < op_colors.size(); i++)
+//       {
+//          color c = op_colors[i];
+
+//          // Recorro las fichas de ese color.
+//          for (int j = 0; j < num_pieces; j++)
+//          {
+//                // Valoro negativamente que la ficha esté en casilla segura.
+//                if (estado.isSafePiece(c, j))
+//                {
+//                   puntuacion_oponente++;
+//                }
+//                // Casilla meta
+//                else if (estado.getBoard().getPiece(c, j).get_box().type == goal)
+//                {
+//                   puntuacion_oponente += 5;
+//                }
+
+//                // Valorar positivamente cuanto mayor sea la distancia al goal
+//                puntuacion_oponente -= estado.distanceToGoal(c, j);
+//          }
+                     
+//          // Valorar positivamente cuantas más piezas tenga el oponente en casa
+//          puntuacion_oponente -= estado.piecesAtHome(c)*2;
+//       }
+
+//    //   // Esta situación es muy buena
+//    //   if ((estado.piecesAtGoal(op_colors[0]) + estado.piecesAtHome(op_colors[0]) == 3)
+//    //       && (estado.piecesAtGoal(op_colors[1]) + estado.piecesAtHome(op_colors[1]) == 3))
+//    //       puntuacion_oponente -= 50;
+
+//       //-----------------------------------------------------
+//       // Comprobar si se ha comido ficha
+//       if (estado.isEatingMove()){
+
+//          pair<color,int> eatenPiece = estado.eatenPiece();
+         
+//          // Si la ficha comida es del jugador
+//          if (eatenPiece.first == my_colors[0] || eatenPiece.first == my_colors[1]){
+
+//                // Si se ha comido el jugador a él mismo
+//                if (estado.getCurrentPlayerId() == jugador)
+//                   puntuacion_jugador -= 5;
+//                // Si le ha comido el oponente
+//                else
+//                   puntuacion_jugador -= 10;
+//          }
+//          // Si la ficha comida es del oponente
+//          else{
+
+//                // Si se ha comido el oponente a sí mismo
+//                if (estado.getCurrentPlayerId() == oponente)
+//                   puntuacion_oponente -= 5;
+//                // Si le ha comido el jugador
+//                else
+//                   puntuacion_oponente -= 10;
+//          }
+//       }
+
+//       // Devuelvo la puntuación de mi jugador menos la puntuación del oponente.
+//       return puntuacion_jugador - puntuacion_oponente;
+//    }
+// }
+
+
 
 float AIPlayer::Poda_AlfaBeta(const Parchis &actual, int jugador, int profundidad, int profundidad_max, color &c_piece, int &id_piece, int &dice, float alpha, float beta, Heuristic *heuristic) const
 {
@@ -559,7 +796,16 @@ float AIPlayer::ProfundidadDinamica(const Parchis &actual, int jugador, int prof
    //ajustamos profundidad en funcion de la ramificacion
    int ramificacion = rama.size();
 
-   int prof_hijos = profundidad_max; //+ ((ramificacion <= 4) ? 2 : (ramificacion <= 8 ? 1 : 0));
+   if (rama.empty()) return heuristic->evaluate(actual, jugador);
+   
+   int prof_temp = profundidad +1;
+   int extra = (ramificacion <= 4)  ?  2 :
+               (ramificacion <= 8)  ?  1 :
+               (ramificacion >= 20) ? -2 :
+               (ramificacion >= 12) ? -1 : 0;
+
+   
+   int prof_hijos = clamp(prof_temp + extra, prof_temp, 30);   //nunca se salga de los limites de profundidad minim y maxima
 
    
    if (actual.getCurrentPlayerId() == jugador)   // Nodo MAX
@@ -650,9 +896,29 @@ float AIPlayer::OrdenacionMovimientos(const Parchis &actual, int jugador, int pr
 
    //determinar si vamos a hacer ordenacion o no en funcion de la profundidad y de la ramificacion
    bool ordenar = (profundidad <= 1) || (profundidad <= 3 && ramificacion <= 8); 
-   
+
+   //ordenamos
+   if( ordenar ){
+
+      bool esMax = (actual.getCurrentPlayerId() == jugador);
+
+      sort(rama.begin(), rama.end(),[&](const ParchisSis &a, const ParchisSis &b)
+      {
+         const Parchis &pa = *a;                  // estado del primer hijo
+         const Parchis &pb = *b;                  // estado del segundo hijo
+
+         float va = heuristic->evaluate(pa, jugador);
+         float vb = heuristic->evaluate(pb, jugador);
+
+         // MAX: de mayor a menor   |   MIN: de menor a mayor
+         return (esMax ? (va > vb)  :  (va < vb));
+      });
+   }
+
+
    if (actual.getCurrentPlayerId() == jugador)   // Nodo MAX
    { 
+
       for(int i = 0; i < rama.size(); i++){
          
          ParchisSis hijo_i = rama[i];     // Acceso al estado con el hijo i-ésimo del vector
@@ -672,7 +938,7 @@ float AIPlayer::OrdenacionMovimientos(const Parchis &actual, int jugador, int pr
          }
 
          // Búsqueda en profundidad (llamada recursiva)
-         float new_val = ProfundidadDinamica(nuevo_hijo, jugador, profundidad + 1, profundidad_max, c_piece, id_piece, dice, alpha, beta, heuristic);
+         float new_val = OrdenacionMovimientos(nuevo_hijo, jugador, profundidad + 1, profundidad_max, c_piece, id_piece, dice, alpha, beta, heuristic);
 
          if (new_val > alpha)
          {
@@ -707,7 +973,7 @@ float AIPlayer::OrdenacionMovimientos(const Parchis &actual, int jugador, int pr
          }
          
          // Búsqueda en profundidad (llamada recursiva)
-         float new_val = ProfundidadDinamica(nuevo_hijo, jugador, profundidad + 1, profundidad_max, c_piece, id_piece, dice, alpha, beta, heuristic);
+         float new_val = OrdenacionMovimientos(nuevo_hijo, jugador, profundidad + 1, profundidad_max, c_piece, id_piece, dice, alpha, beta, heuristic);
          
          // Me voy quedando con el mínimo
          if (new_val < beta)

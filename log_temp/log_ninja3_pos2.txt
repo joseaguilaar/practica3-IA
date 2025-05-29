@@ -1,0 +1,206 @@
+Trying 150.214.203.225:56789
+Connected to server 150.214.203.225:56789
+HELLO sent.
+version: 4
+args: ninjagame 
+204 ACCEPTED received
+ip_addr: 150.214.203.225 port: 57000
+Connected to server 150.214.203.225:57000
+GAME_PARAMETERS sent
+player: 1 name: 2 init_board: 5 ai_id: 3
+206 OK_START_GAME received
+Message: Ninja 3: El combate definitivo.
+[1;35m++++++++++++++++++++++++++++++++++++++[0m
+[1;35m¡COMIENZA LA PARTIDA![0m
+[1;35mJugador 1: Ninja 3: El combate definitivo.[0m
+[1;35mJugador 2: 2[0m
+[1;35m++++++++++++++++++++++++++++++++++++++[0m
+[1;36m----------------[0m
+[1;36mTurno: 1[0m
+[1;33mJugador actual: 1 (Ninja 3: El combate definitivo.)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 2 Amarillo 1 2
+[1;37m====================[0m
+[1;37mNodos generados: 0[0m
+[1;37mNodos evaluados: 0[0m
+[1;32mTotal de nodos: 0[0m
+[1;32mTiempo de generación+evaluación: 0[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 11.8666 segundos[0m
+301 MOVED sent
+Move: 2 Amarillo 1 2
+[1;36m----------------[0m
+[1;36mTurno: 2[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Valor MiniMaxLimitado: 15 Accion: Rojo 0 6
+[1;38;5;208mMovimiento elegido: Rojo 0 6[0m
+[1;37m====================[0m
+[1;37mNodos generados: 2863934[0m
+[1;37mNodos evaluados: 636079[0m
+[1;33mTotal de nodos: 3500013[0m
+[1;32mTiempo de generación+evaluación: 35.7945[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 50.5895 segundos[0m
+301 MOVED sent
+Move: 3 Rojo 0 6
+[1;36m----------------[0m
+[1;36mTurno: 3[0m
+[1;34mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Valor MiniMaxLimitado: -27 Accion: Azul 0 4
+[1;38;5;208mMovimiento elegido: Azul 0 4[0m
+[1;37m====================[0m
+[1;37mNodos generados: 2628979[0m
+[1;37mNodos evaluados: 871022[0m
+[1;33mTotal de nodos: 3500001[0m
+[1;32mTiempo de generación+evaluación: 36.6321[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 16785 segundos[0m
+301 MOVED sent
+Move: 4 Azul 0 4
+[1;36m----------------[0m
+[1;36mTurno: 4[0m
+[1;31mJugador actual: 2 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+Valor MiniMaxLimitado: -37 Accion: Azul 0 69
+[1;38;5;208mMovimiento elegido: Azul 0 69[0m
+[1;37m====================[0m
+[1;37mNodos generados: 1117483[0m
+[1;37mNodos evaluados: 487015[0m
+[1;32mTotal de nodos: 1604498[0m
+[1;32mTiempo de generación+evaluación: 13.7303[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 15.4599 segundos[0m
+301 MOVED sent
+Move: 5 Azul 0 69
+[1;36m----------------[0m
+[1;36mTurno: 5[0m
+[1;32mJugador actual: 1 (Ninja 3: El combate definitivo.)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 3 Rojo 0 6
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m

@@ -1,0 +1,92 @@
+Trying 150.214.203.225:56789
+Connected to server 150.214.203.225:56789
+HELLO sent.
+version: 4
+args: ninjagame 
+204 ACCEPTED received
+ip_addr: 150.214.203.225 port: 57001
+Connected to server 150.214.203.225:57001
+GAME_PARAMETERS sent
+player: 0 name: 2 init_board: 5 ai_id: 2
+206 OK_START_GAME received
+Message: Ninja 2: Una batalla de igual a igual.
+[1;35m++++++++++++++++++++++++++++++++++++++[0m
+[1;35m¡COMIENZA LA PARTIDA![0m
+[1;35mJugador 1: 2[0m
+[1;35mJugador 2: Ninja 2: Una batalla de igual a igual.[0m
+[1;35m++++++++++++++++++++++++++++++++++++++[0m
+[1;36m----------------[0m
+[1;36mTurno: 1[0m
+[1;33mJugador actual: 1 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Valor MiniMaxLimitado: 22 Accion: Verde 0 6
+[1;38;5;208mMovimiento elegido: Verde 0 6[0m
+[1;37m====================[0m
+[1;37mNodos generados: 2629758[0m
+[1;37mNodos evaluados: 870253[0m
+[1;33mTotal de nodos: 3500011[0m
+[1;32mTiempo de generación+evaluación: 33.9256[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 48.3647 segundos[0m
+301 MOVED sent
+Move: 2 Verde 0 6
+[1;36m----------------[0m
+[1;36mTurno: 2[0m
+[1;33mJugador actual: 1 (2)[0m
+[1;36m----------------[0m
+[1;38;5;208mRealizo un movimiento automatico[0m
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Límite de nodos alcanzado, devolviendo el mejor nodo parcial
+Valor MiniMaxLimitado: 21 Accion: Verde 0 4
+[1;38;5;208mMovimiento elegido: Verde 0 4[0m
+[1;37m====================[0m
+[1;37mNodos generados: 2286197[0m
+[1;37mNodos evaluados: 1213808[0m
+[1;33mTotal de nodos: 3500005[0m
+[1;32mTiempo de generación+evaluación: 26.5289[0m
+[1;37m====================[0m
+[1;37mTiempo de movimiento: 300.969 segundos[0m
+301 MOVED sent
+Move: 3 Verde 0 4
+[1;36m----------------[0m
+[1;36mTurno: 3[0m
+[1;34mJugador actual: 2 (Ninja 2: Una batalla de igual a igual.)[0m
+[1;36m----------------[0m
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+301 MOVED received
+Move: 2 Verde 0 6
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m
+102 TEST_ALIVE received
+102 TEST_ALIVE received. Still alive.
+[1;38;5;208mEsperando movimiento del oponente...[0m

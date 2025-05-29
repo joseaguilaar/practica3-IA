@@ -10,7 +10,7 @@ class ValoracionTest: public Heuristic{
       virtual float getHeuristic(const Parchis &estado, int jugador) const;
 };
 
-class HeuristicaP_A: public Heuristic{
+class Heuristica1: public Heuristic{
    protected:
       virtual float getHeuristic(const Parchis &estado, int jugador) const;
 };
