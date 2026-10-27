@@ -62,3 +62,6 @@ CMakeDoxyfile.in
 CMakeDoxygenDefaults.cmake
 Doxyfile.in
 cmake-build-debug/
+
+# Logs generados por speed.sh
+log_temp/*.txt
